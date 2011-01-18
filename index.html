@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>jSocial | Social Links Plugin By thatryan</title>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/jquery.jsocial.js" type="text/javascript" charset="utf-8"></script>
+
+<?php include_once "utilities/syntax/main.php"; ?>
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<div id="header">
+<h1>jSocial</h1>
+<h2>A Social Networking Plugin</h2>
+<p>This is a simple plugin to add your social networking sites &amp; icons in a list to display on your website! </p>
+<p>This is a first version, and includes a few options which I hope to expand on. Very easy to use, simply include the script, and add your usernames or URL's in the call,drop in a div and the plugin does the rest.</p>
+
+<p>
+	Minimum requirements to use, be sure to include jQuery and the plugin itself;
+</p>
+<pre class="brush:js">
+	&lt;script src="js/jquery.jsocial.js" type="text/javascript" charset="utf-8"></script>
+</pre>
+
+<p>And to activate it add the function call and pass in your names/options;</p>
+
+<pre class="brush:js">
+	&lt;script type="text/javascript" charset="utf-8">
+		$('.social').jsocial({
+			
+			//options and usernames here
+		});
+
+	&lt;/script>
+</pre>
+<p>Then place this where you want the list to appear;</p>
+<pre class="brush:html">
+	&lt;div class="social">&lt;/div>
+</pre>
+
+<h4 class="credit_text">The sweet icons used here are the result of hard work by Rogie King of <a href="http://www.komodomedia.com/" title="Komodo Media">Komodo Media</a>. Please include an attribution link back to him if you use these images. </h4>
+
+<p>Making and using your own images is simple! For large icons use size of 32x32 pixels and 16x16 pixels for the small size. I recommend using <a href="http://csssprites.com/" title="CSS Sprites generator">CSS Sprites Generator</a> for awesome ease.</p>
+	<ul class="networks">
+		<h3>Included Social Networks (so far):</h3>
+		
+		<li>Twitter</li>
+		<li>Facebook</li>
+		<li>Flickr</li>
+		<li>Delicious</li>
+		<li>FriendFeed</li>
+		<li>Linked In</li>
+		<li>YouTube</li>
+		<li>Digg</li>
+		<li>Last.FM</li>
+		<li>Feedburner</li>
+	</ul>
+	
+	<ul class="options">
+		<h3>User editable options:</h3>
+		
+		<li>Auto Center List</li>
+		<li>Display Inline. Horizontal or Vertical</li>
+		<li>Open Links in New Page</li>
+		<li>Display Using Small or Large Icons</li>
+	</ul>
+</div>
+<div class="clearfix"></div><!-- .clearfix -->
+
+<h1>Examples</h1>
+<div id="demo1">	
+<h3>All Networks</h3>	
+<div class="social"></div>	
+<div class="clearfix">
+
+</div><!-- .clearfix -->
+<p>This list calls all the networks, and uses the options to display inline and center itself inside a div.</p>
+
+<pre class="brush:js">
+$('.social').jsocial({
+twitter		:  'ryanolson',
+facebook	:  'facebook.com/thatryan',
+flickr		:  'thatryan',
+delicious	:  'thatryan',
+linked		:  'linkedin.com/in/thatryan',
+youtube		:  'youtube.com/thatryan1',
+feed		:  'thatryan',
+friendfeed	:  'thatryan',
+digg		:  'thatryan',
+lastfm		:  'thatryan',
+center		: true,	
+inline		: true
+
+});
+</pre>
+</div>
+
+<div id="demo2">
+<h3>Select Options</h3>
+<div class="social2"></div><!-- .social2 -->
+<div class="clearfix">
+
+</div><!-- .clearfix -->
+<p>Here we call just a few networks and use the small icons.</p>
+<pre class="brush:js">
+$('.social2').jsocial({
+twitter		:  'ryanolson',
+facebook	:  'facebook.com/thatryan',
+flickr		:  'thatryan',
+delicious	:  'thatryan',
+linked		:  'linkedin.com/in/thatryan',
+small		: true
+
+});
+</pre>
+</div><!-- #demo2 -->
+
+</div><!-- #wrapper -->
+<div id="footer">
+
+<p>copyright &copy; 2010 <a href="http://thatryan.com" title="thatryan.com">thatryan.com</a>  |  Plugin by Ryan Olson  | Social icons by Rogie King of <a href="http://www.komodomedia.com/" title="Komodo Media">Komodo Media</a></p>
+
+</div><!-- .footer -->
+
+<?php include_once "utilities/sticky_bar/sticky_bar.php"; ?>
+
+<script type="text/javascript" charset="utf-8">
+$('.social').jsocial({
+twitter		:  'ryanolson',
+facebook	:  'facebook.com/thatryan',
+flickr		:  'thatryan',
+delicious	:  'thatryan',
+linked		:  'linkedin.com/in/thatryan',
+youtube		:  'youtube.com/thatryan1',
+feed		:  'thatryan',
+friendfeed	:  'thatryan',
+digg		:  'thatryan',
+lastfm		:  'thatryan',
+center		: true,	
+inline		: true
+});
+$('.social2').jsocial({
+twitter		:  'ryanolson',
+facebook	:  'facebook.com/thatryan',
+flickr		:  'thatryan',
+delicious	:  'thatryan',
+linked		:  'linkedin.com/in/thatryan',
+small		: true
+
+});
+</script>
+</body>
+</html>
+
